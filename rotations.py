@@ -1,8 +1,13 @@
-
+# Time Complexity = O(n) where n is the number of lines in the input file
+# Space Complexity = O(1)
+# Time Complexity could be viewed as O(n*d) where n is the number of lines and d is the number of digits in the largest number
+# However, largest input is 4 digits which is a constant. If input were to grow digit size then we would have 0(n*d)
+    
 def findDial() ->int:
     dial = 50
     count = 0
     file_path = 'input.txt'
+
     try:
         with open(file_path, 'r') as file:
             for line in file:
@@ -26,6 +31,7 @@ def findDial() ->int:
     except FileNotFoundError:
         print(f"Error: The file '{file_path}' was not found.")
         return 0
+    
 
 def main():
     print(findDial())
