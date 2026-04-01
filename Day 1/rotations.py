@@ -1,7 +1,7 @@
 # Time Complexity = O(n) where n is the number of lines in the input file
 # Space Complexity = O(1)
 # Time Complexity could be viewed as O(n*d) where n is the number of lines and d is the number of digits in the largest number
-# However, largest input is 4 digits which is a constant. If input were to grow digit size then we would have 0(n*d)
+# However, largest input is 4 digits which is a constant. If input were to grow digit size then we would have O(n*d)
     
 def findDial() ->int:
     dial = 50
