@@ -28,7 +28,7 @@ def findBadIDs(l : List[tuple]) -> int:
         
        
         for d in range(firstlen, lastlen+1): #O(n)
-            for unit_len in range(1, d//2 +1):  #O(not sure because it only computes if its a valid len)
+            for unit_len in range(1, d//2 +1):  
                 if d % unit_len == 0:
                     magnitude = 10 ** unit_len
                     reps = d //unit_len
