@@ -18,7 +18,7 @@ def readInput() -> list[list[str]]:
     
 
 def findRolls(matrix : list[list[str]]) -> int:
-    count = 0
+    ans = 0
     q = collections.deque()
     ROWS, COLS = len(matrix), len(matrix[0])
     neighbors = [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
@@ -28,16 +28,16 @@ def findRolls(matrix : list[list[str]]) -> int:
         for c in range(COLS):
 
             if matrix[r][c] == "@":
-                county = 0
+                countNieghbors = 0
                 for dr, dc in neighbors:
                     nr, nc = dr+r, dc+ c
                     if min(nr, nc) < 0 or nr == ROWS or nc == COLS or matrix[nr][nc] == ".":
                         continue
-                    county +=1 
-                if county <=3:
-                    count+=1
+                    countNieghbors +=1 
+                if countNieghbors <=3:
+                    ans+=1
     
-    return count
+    return ans
 
 
 
