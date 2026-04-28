@@ -53,15 +53,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-# Brainstorm slop
-# okay didnt realize this is a grid problem. The eight neighbors is the area that surrounds the grid. 
-# i think a solution could be a bit map.  
-# i will probably have to pass through and save some sort of information then get the answer 
-# we loop through and we store current, topleft, topmid, topright, left, right, bottomleft, bottommid, bottom right
-#so we need to handle edge cases where we are at the top, bottom, lef or right
-# if row == 0, then we dont need to worry about top
-# if row == len(matrix)-1 then we don't need to worry about the bottom
-# if col == 0 we don't need to worry about left, 
-# if col == len(row)-1 we don't need to worry about right
